@@ -1,9 +1,9 @@
-# 🏕️ Travel Agency Database – Projekt i dokumentacja
+# 🏕️ Travel Agency Database – Dokumentacja projektu
 
-Kompletny projekt bazy danych dla systemu wspomagającego działalność biura turystycznego.  
-Zawiera on szczegółowy schemat bazy danych, definicje obiektów (tabele, widoki, procedury, triggery), reguły integralności, uprawnienia oraz przykładowe dane testowe.
+Repozytorium zawiera kompletny projekt bazy danych dla systemu wspomagającego działalność biura turystycznego.  
+Wszystkie elementy – schemat bazy danych, skrypty DDL, widoki, procedury, triggery, definicje uprawnień oraz przykładowe dane testowe – zostały zebrane w jednym pliku **`Database.pdf`**.
 
-Celem projektu jest dostarczenie gotowego do wdrożenia modelu danych, który może stanowić bazę dla docelowej aplikacji obsługującej sprzedaż wycieczek, rezerwacje oraz raportowanie.
+Dokument ten może stanowić gotową specyfikację dla deweloperów, administratorów baz danych lub analityków, którzy chcą zbudować aplikację opartą na tym modelu danych.
 
 ---
 
@@ -15,46 +15,23 @@ Projekt obejmuje:
 - **Schemat bazy danych** – diagram ERD oraz szczegółowy opis tabel (kolumny, typy, klucze, ograniczenia).
 - **Skrypty DDL** – kod do tworzenia tabel, indeksów, kluczy obcych, wartości domyślnych i warunków CHECK.
 - **Widoki, procedury, funkcje, triggery** – implementacja logiki biznesowej (rezerwacje, modyfikacje, walidacje) oraz ułatwień raportowania.
-- **Dane testowe** – skrypt generujący realistyczny zestaw danych do testowania i prezentacji.
 - **Zarządzanie uprawnieniami** – definicje ról i poziomów dostępu do obiektów bazy danych.
 
 ---
 
-## 🎯 Dla kogo jest ten projekt?
+## 🎯 Dla kogo jest ten dokument?
 
-Projekt jest przeznaczony dla:
-
-- **Developerów aplikacji** – mogą wykorzystać gotowy schemat i logikę bazy danych jako warstwę danych w nowej aplikacji webowej lub desktopowej.
-- **Administratorów baz danych** – mogą wdrożyć go jako produkcyjną bazę danych po ewentualnych dostosowaniach.
-- **Analityków biznesowych** – mogą korzystać z widoków raportowych do analizy sprzedaży, obłożenia wycieczek i wpłat.
-
----
-
-## 🧱 Zawartość repozytorium
-
-| Plik | Opis |
-|------|------|
-| `docs/functionality.md` | Opis funkcji systemu i macierz uprawnień |
-| `docs/erd.png` | Diagram bazy danych |
-| `sql/schema.sql` | Skrypt DDL – tworzenie tabel, kluczy, ograniczeń |
-| `sql/views.sql` | Definicje widoków raportowych |
-| `sql/procedures.sql` | Procedury składowane (rezerwacje, modyfikacje, płatności) |
-| `sql/triggers.sql` | Triggers realizujące automatyczne sprawdzanie terminów i spójności |
-| `sql/test_data.sql` | Skrypt wypełniający bazę przykładowymi danymi |
-| `sql/roles.sql` | Definicje ról i nadanie uprawnień |
+- **Developerzy aplikacji** – znajdą w nim gotowy model danych i logikę biznesową, którą mogą wykorzystać jako warstwę danych w nowej aplikacji webowej lub desktopowej.
+- **Administratorzy baz danych** – mogą wdrożyć opisany schemat jako produkcyjną bazę danych po ewentualnych dostosowaniach.
+- **Analitycy biznesowi** – mogą korzystać z zaproponowanych widoków raportowych do analizy sprzedaży, obłożenia wycieczek i wpłat.
 
 ---
 
 ## 🚀 Jak wykorzystać ten projekt?
 
-1. **Przegląd dokumentacji** – zacznij od zapoznania się z opisem funkcji i schematem bazy danych w folderze `docs`.
-2. **Wdrożenie schematu** – wykonaj skrypty w odpowiedniej kolejności:
-   - `schema.sql` – struktura bazy danych
-   - `views.sql`
-   - `procedures.sql`
-   - `triggers.sql`
-   - `roles.sql`
-3. **Załadowanie danych testowych** – opcjonalnie uruchom `test_data.sql`, aby uzyskać przykładowe dane.
+1. **Pobierz plik `Database.pdf`** – zawiera on wszystkie informacje niezbędne do wdrożenia bazy danych.
+2. **Zapoznaj się z dokumentacją** – w szczególności ze schematem bazy danych, opisami tabel oraz skryptami DDL.
+3. **Wdróż schemat** – korzystając z dołączonych skryptów SQL (zamieszczonych w dokumencie) utwórz bazę danych w środowisku Microsoft SQL Server.
 4. **Rozwijaj aplikację** – na bazie przygotowanego modelu możesz tworzyć aplikację kliencką (np. w C#, Javie, Pythonie) korzystającą z tego schematu.
 
 ---
@@ -67,25 +44,9 @@ Projekt jest przeznaczony dla:
 
 ---
 
-## 📊 Przykładowe dane testowe
+## 📄 Licencja
 
-Skrypt `test_data.sql` generuje dane dla:
-
-- 10 wycieczek w różnych terminach i miejscach
-- 5–10 usług dodatkowych dla każdej wycieczki
-- 50 klientów (firmy i osoby prywatne)
-- 150 rezerwacji w różnych stanach (nowe, potwierdzone, anulowane, zakończone)
-- Imiennych uczestników dla każdej rezerwacji
-- Historii wpłat (częściowe i pełne)
-
-Dzięki temu można od razu testować działanie procedur, widoków i raportów.
-
----
-
-## 📄 Licencja i autor
-
-Projekt został wykonany jako zadanie zaliczeniowe z przedmiotu [nazwa przedmiotu].  
-Może być swobodnie wykorzystywany jako baza do dalszego rozwoju systemu zarządzania biurem turystycznym.
+Projekt może być swobodnie wykorzystywany jako baza do dalszego rozwoju systemu zarządzania biurem turystycznym.
 
 ---
 
